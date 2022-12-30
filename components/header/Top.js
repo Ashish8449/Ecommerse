@@ -12,7 +12,7 @@ const country = {
   flag: 'https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg',
   name: 'India',
 }
-export default function Top() {
+export default function Top({country}) {
   //   const { data: session } = useSession()
   const [visible, setVisible] = useState(false)
   const [logIn, setLogIn] = useState(false)
