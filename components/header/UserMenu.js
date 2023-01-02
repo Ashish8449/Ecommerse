@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './style.module.scss'
-// import { signOut, signIn } from 'next-auth/react'
-export default function UserMenu() {
-  const session = null
+import { signOut, signIn } from 'next-auth/react'
+export default function UserMenu({ session }) {
+  // const session = null
   return (
     <div className={styles.menu}>
       <h4>Welcome to Shoppay !</h4>
