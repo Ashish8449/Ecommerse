@@ -19,10 +19,17 @@ export default NextAuth({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
-    // Passwordless / email sign in
-    EmailProvider({
-      server: process.env.MAIL_SERVER,
-      from: 'NextAuth.js <no-reply@example.com>',
-    }),
+    // // Passwordless / email sign in
+    // EmailProvider({
+    //   server: process.env.MAIL_SERVER,
+    //   from: 'NextAuth.js <no-reply@example.com>',
+    // }),
   ],
+  pages: {
+    signIn: '/signin',
+  },
+  session: {
+    strategy: 'jwt',
+  },
+  secret: process.env.JWT_SECRET,
 })
